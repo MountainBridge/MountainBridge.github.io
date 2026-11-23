@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nidhi Verma · Senior Full Stack Engineer</title>
+<meta name="description" content="Nidhi Verma, Senior Full Stack Engineer focused on AI evaluation and reliability. 11+ years building financial software. Case studies, writing and open-source work.">
+<meta property="og:title" content="Nidhi Verma · Senior Full Stack Engineer">
+<meta property="og:description" content="Start with the person. Ship with evidence. Case studies on architecture, developer experience and AI reliability.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%231D1B18'/%3E%3Cpath d='M16 1a15 15 0 0 1 0 30z' fill='%23F0A24E'/%3E%3C/svg%3E">
+<script>
+  (function(){var t;try{t=localStorage.getItem('theme')}catch(e){}
+  if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  document.documentElement.dataset.theme=t;})();
+</script>
+<style>
+:root{
+  --bg:#F4EEE3; --surface:#FBF7F0; --ink:#1D1B18; --muted:#6F675D; --line:#DDD3C3;
+  --accent:#C2502A; --accent-2:#2F5D50; --chip:#EFE6D7;
+  --serif:'Lora',Georgia,serif; --sans:'Inter',-apple-system,'Segoe UI',sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --display:var(--serif);
+}
+:root[data-theme="dark"]{
+  --bg:#0D1117; --surface:#161B22; --ink:#E9E4D8; --muted:#8B949E; --line:#30363D;
+  --accent:#F0A24E; --accent-2:#7EE787; --chip:#1C2230;
+  --display:var(--mono);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);transition:background .35s,color .35s;-webkit-font-smoothing:antialiased}
+:root[data-theme="dark"] body{background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:24px 24px;background-attachment:fixed}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+.only-light{display:revert} .only-dark{display:none}
+:root[data-theme="dark"] .only-light{display:none} :root[data-theme="dark"] .only-dark{display:revert}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.brand{font-family:var(--serif);font-weight:600;font-size:19px;text-decoration:none;letter-spacing:-.01em}
+:root[data-theme="dark"] .brand{font-family:var(--mono);font-weight:500;font-size:16px}
+.links{display:flex;gap:22px;margin-left:auto;font-size:14px}
+.links a{text-decoration:none;color:var(--muted)} .links a:hover{color:var(--ink)}
+.toggle{position:relative;width:64px;height:32px;border-radius:16px;border:1.5px solid var(--ink);background:linear-gradient(90deg,#F4EEE3 50%,#161B22 50%);cursor:pointer;flex:none}
+.toggle::after{content:"";position:absolute;top:3px;left:3px;width:23px;height:23px;border-radius:50%;background:#C2502A;transition:transform .35s cubic-bezier(.6,.1,.2,1),background .35s}
+:root[data-theme="dark"] .toggle::after{transform:translateX(32px);background:#F0A24E}
+.toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (max-width:760px){.links{display:none}.toggle{margin-left:auto}}
+/* hero */
+.hero{padding:88px 0 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.kicker{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+:root[data-theme="dark"] .kicker{font-family:var(--mono);letter-spacing:.12em}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(44px,7vw,76px);line-height:1.02;letter-spacing:-.015em;margin:18px 0 20px}
+:root[data-theme="dark"] h1{letter-spacing:-.04em;font-size:clamp(38px,6vw,64px)}
+h1 em{font-style:italic;color:var(--accent)}
+:root[data-theme="dark"] h1 em{font-style:normal;color:var(--accent-2)}
+.lede{font-size:19px;color:var(--muted);max-width:34em}
+.lede strong{color:var(--ink);font-weight:500}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-1px)}
+.hint{margin-top:22px;font-size:13px;color:var(--muted)}
+.hint b{color:var(--accent);font-weight:600}
+.visual{border-radius:18px;padding:28px 24px;border:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;justify-content:center;min-height:320px}
+@media (max-width:860px){.visual{min-height:0}}
+.path svg{width:100%;height:auto;display:block}
+.path text{font-family:var(--sans);font-size:14px;fill:var(--ink);font-weight:500}
+.path .note{font-family:var(--serif);font-style:italic;fill:var(--accent);font-size:15px;font-weight:400}
+.term{font-family:var(--mono);font-size:13px;line-height:1.95;white-space:nowrap}
+.term .dots{display:flex;gap:7px;margin-bottom:12px}.term .dots i{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.term .row{display:grid;grid-template-columns:108px 18px 1fr;color:var(--muted)}
+.term .row b{color:var(--ink);font-weight:400} .term .row i{color:var(--accent-2);font-style:normal}
+.term .cmd span{color:var(--accent)}
+.term .cursor{display:inline-block;width:8px;height:16px;background:var(--accent);vertical-align:-2px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.term .cursor{animation:none}*{transition:none!important;scroll-behavior:auto!important}}
+@media (max-width:860px){.hero{grid-template-columns:1fr;padding:56px 0 40px;gap:36px}.term{font-size:11.5px;white-space:normal}.term .row{grid-template-columns:96px 16px 1fr}}
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:36px;flex-wrap:wrap}
+h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4vw,42px);letter-spacing:-.01em;line-height:1.1}
+:root[data-theme="dark"] h2{letter-spacing:-.03em}
+.sec-head p{color:var(--muted);max-width:30em}
+.num{font-family:var(--mono);font-size:13px;color:var(--accent);display:block;margin-bottom:10px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+.card h3{font-family:var(--serif);font-weight:600;font-size:21px;margin-bottom:10px;line-height:1.25}
+:root[data-theme="dark"] .card h3{font-family:var(--mono);font-weight:500;font-size:17px}
+.card p{color:var(--muted);font-size:15px}
+.card ul{list-style:none;margin-top:14px;font-size:14.5px}
+.card li{padding:6px 0;border-top:1px dashed var(--line)}
+@media (max-width:860px){.pillars{grid-template-columns:1fr}}
+.work{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.work a.card{text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:transform .2s,border-color .2s}
+.work a.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.more{margin-top:auto;font-size:14px;font-weight:500;color:var(--ink)}
+.work a.card.feature{grid-column:span 2;display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.feature pre{font-family:var(--mono);font-size:13px;line-height:1.7;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px;overflow:auto;color:var(--muted)}
+.feature pre b{color:var(--accent-2);font-weight:400}
+@media (max-width:860px){.work{grid-template-columns:1fr}.work a.card.feature{grid-column:auto;grid-template-columns:1fr}}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s}
+.step{padding:22px 18px 22px 0;border-top:2px solid var(--ink);position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--mono);font-size:12px;color:var(--accent)}
+.step h4{font-family:var(--display);font-size:20px;font-weight:500;margin:6px 0 6px}
+.step p{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.steps{grid-template-columns:1fr}.step{padding-right:0}}
+.writing{list-style:none}
+.writing li{border-top:1px solid var(--line)}
+.writing li:last-child{border-bottom:1px solid var(--line)}
+.writing a{display:grid;grid-template-columns:1fr auto;gap:16px;padding:20px 0;text-decoration:none;align-items:baseline}
+.writing a:hover h3{color:var(--accent)}
+.writing h3{font-family:var(--serif);font-weight:500;font-size:21px;transition:color .2s}
+:root[data-theme="dark"] .writing h3{font-family:var(--mono);font-size:16px}
+.writing p{color:var(--muted);font-size:14.5px;margin-top:4px;grid-column:1}
+.writing span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.timeline{display:grid;grid-template-columns:200px 1fr;gap:0 32px}
+.timeline dt{font-family:var(--mono);font-size:13px;color:var(--muted);padding:18px 0;border-top:1px solid var(--line)}
+.timeline dd{padding:16px 0;border-top:1px solid var(--line)}
+.timeline dd b{font-weight:600}
+.timeline dd p{color:var(--muted);font-size:15px}
+@media (max-width:700px){.timeline{grid-template-columns:1fr}.timeline dt{padding-bottom:0}.timeline dd{border-top:0;padding-top:4px}}
+.stories{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.phone{justify-self:center;width:250px;aspect-ratio:9/16;border-radius:30px;border:1.5px solid var(--ink);background:var(--surface);padding:22px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;position:relative;overflow:hidden}
+.phone::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 40%,color-mix(in srgb,var(--accent) 22%,transparent))}
+.phone b{position:relative;font-family:var(--display);font-size:24px;line-height:1.15;font-weight:500}
+.phone small{position:relative;font-family:var(--mono);font-size:12px;color:var(--muted)}
+@media (max-width:760px){.stories{grid-template-columns:1fr}}
+footer{padding:72px 0 56px;border-top:1px solid var(--line)}
+footer h2{max-width:14em}
+.contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.fine{margin-top:48px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#top">Nidhi Verma</a>
+  <div class="links"><a href="#work">Work</a><a href="#approach">Approach</a><a href="#writing">Writing</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+  <button class="toggle" id="toggle" aria-label="Switch between light and dark mode" title="Flip the story / system view"></button>
+</div></nav>
+<main id="top" class="wrap">
+  <header class="hero">
+    <div>
+      <div class="kicker"><span class="only-light">The story · light mode</span><span class="only-dark">// the system · dark mode</span></div>
+      <h1><span class="only-light">Start with the person.<br><em>Ship with evidence.</em></span><span class="only-dark">Same journey.<br><em>Now with proof.</em></span></h1>
+      <p class="lede"><strong>Nidhi Verma, Senior Full Stack Engineer · AI evaluation &amp; reliability.</strong> 11+ years building financial software at JPMorganChase. I turn messy, regulated workflows into systems people can trust, and I explain how they work so other engineers can build on them.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See selected work →</a>
+        <a class="btn" href="https://www.linkedin.com/in/nidhiverma200" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/MountainBridge" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="hint">Try the switch in the corner: <b class="only-light">light shows the story</b><b class="only-dark">dark shows the system</b> behind every project.</p>
+    </div>
+    <div class="visual">
+      <div class="path only-light" aria-label="person, journey, constraints, architecture, evidence">
+        <svg viewBox="0 0 520 300" role="img" aria-hidden="true">
+          <path d="M30,170 C90,170 90,110 150,110 C210,110 210,190 270,190 C330,190 330,100 390,100 C450,100 450,150 490,150" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 6"/>
+          <circle cx="30" cy="170" r="13" fill="#C2502A" stroke="#1D1B18" stroke-width="1.6"/><text x="30" y="208" text-anchor="middle">person</text>
+          <circle cx="150" cy="110" r="9" fill="#FBF7F0" stroke="#1D1B18" stroke-width="1.6"/><text x="150" y="146" text-anchor="middle">journey</text>
+          <circle cx="270" cy="190" r="9" fill="#FBF7F0" stroke="#1D1B18" stroke-width="1.6"/><text x="270" y="226" text-anchor="middle">constraints</text>
+          <circle cx="390" cy="100" r="9" fill="#FBF7F0" stroke="#1D1B18" stroke-width="1.6"/><text x="390" y="136" text-anchor="middle">architecture</text>
+          <circle cx="490" cy="150" r="13" fill="#C2502A" stroke="#1D1B18" stroke-width="1.6"/><text x="482" y="188" text-anchor="middle">evidence</text>
+          <path d="M240,250 C262,268 292,270 314,254" fill="none" stroke="#C2502A" stroke-width="1.4"/><path d="M308,250 L315,254 L309,260" fill="none" stroke="#C2502A" stroke-width="1.4"/>
+          <text class="note" x="160" y="290">where the real problem usually hides</text>
+        </svg>
+      </div>
+      <div class="term only-dark" aria-label="Trace of the same journey">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="cmd"><span>$</span> trace --journey loan-payment</div>
+        <div class="row"><b>person</b><i>✓</i>ops analyst · loan servicing</div>
+        <div class="row"><b>journey</b><i>✓</i>steps mapped · hand-offs named</div>
+        <div class="row"><b>constraints</b><i>✓</i>SLA · audit trail · idempotency</div>
+        <div class="row"><b>architecture</b><i>✓</i>event-driven state machine</div>
+        <div class="row"><b>evidence</b><i>✓</i>regression · field-level eval</div>
+        <div class="cmd"><span>$</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+  </header>
+  <section id="what">
+    <div class="sec-head"><div><span class="num">01 / what I do</span><h2>Three things I'm hired for</h2></div></div>
+    <div class="pillars">
+      <div class="card"><h3>Full stack delivery in regulated domains</h3><p>Payments, onboarding, lending and loan operations. Front end to API to data, built for audit trails and failure.</p>
+        <ul><li>TypeScript · React · micro-frontends</li><li>Node.js · Java · Spring · REST</li><li>Workflow and state-machine design</li></ul></div>
+      <div class="card"><h3>AI evaluation &amp; reliability</h3><p>AI output can look right and still be wrong. I build checks that score it field by field, weighted by business impact.</p>
+        <ul><li>LLM evaluation and test design</li><li>Agents, tools and MCP</li><li>Regression that explains <i>why</i> a test failed</li></ul></div>
+      <div class="card"><h3>Making systems easy to understand</h3><p>Case studies, reference patterns and short videos that help other engineers adopt good practice faster.</p>
+        <ul><li>Technical writing and docs</li><li>Talks and walkthroughs</li><li>Engineering Stories on Instagram</li></ul></div>
+    </div>
+  </section>
+  <section id="work">
+    <div class="sec-head"><div><span class="num">02 / selected work</span><h2>Case studies &amp; builds</h2></div><p>Public, synthetic examples. No employer code or data, just the patterns and the reasoning.</p></div>
+    <div class="work">
+      <a class="card feature" href="https://github.com/MountainBridge/MountainBridges/blob/main/projects/01-agentic-regression-investigator.md" target="_blank" rel="noopener">
+        <div>
+          <span class="tag">Flagship · in progress</span>
+          <h3>Agentic Regression Investigator</h3>
+          <p>A reference tool that groups failing tests and suggests the likely cause, with context engineered from explicit rules rather than one big prompt.</p>
+          <span class="more">Read the design →</span>
+        </div>
+        <pre>$ investigate --run nightly
+<b>✓</b> 42 failures → 3 clusters
+<b>✓</b> cluster A: config drift
+   evidence: env diff, 2 commits
+<b>?</b> cluster C: needs a human
+<span style="opacity:.6"># illustrative output</span></pre>
+      </a>
+      <a class="card" href="https://github.com/MountainBridge/MountainBridges/blob/main/case-studies/07-banking-platform.md" target="_blank" rel="noopener">
+        <span class="tag">Case study · payments</span><h3>Banking platform: the consistency problem</h3>
+        <p>A transfer times out and the client retries. How idempotency, state and audit trails stop one payment from becoming two.</p><span class="more">Read →</span></a>
+      <a class="card" href="https://github.com/MountainBridge/MountainBridges/blob/main/case-studies/04-ai-that-looks-right.md" target="_blank" rel="noopener">
+        <span class="tag">Case study · AI</span><h3>When AI looks right but is wrong</h3>
+        <p>Fluent, plausible output can still be ungrounded. What to measure beyond "does the answer read well".</p><span class="more">Read →</span></a>
+      <a class="card" href="https://github.com/MountainBridge/MountainBridges/blob/main/case-studies/05-regression-as-a-knowledge-system.md" target="_blank" rel="noopener">
+        <span class="tag">Case study · quality</span><h3>When regression becomes a knowledge problem</h3>
+        <p>Hundreds of tests can still miss the change that matters, because the missing knowledge lives somewhere else.</p><span class="more">Read →</span></a>
+      <a class="card" href="https://github.com/MountainBridge/MountainBridges/tree/main/pattern-to-production/agent-from-zero" target="_blank" rel="noopener">
+        <span class="tag">Build series · agents</span><h3>Build an agent from zero</h3>
+        <p>A six-part series that adds one idea at a time, from a bare model to a working agent. The tools part is runnable today; more parts are on the way.</p><span class="more">Open the code →</span></a>
+    </div>
+  </section>
+  <section id="approach">
+    <div class="sec-head"><div><span class="num">03 / how I work</span><h2>The same five steps, every project</h2></div></div>
+    <div class="steps">
+      <div class="step"><h4>Person</h4><p>Who is stuck, and what does it cost them?</p></div>
+      <div class="step"><h4>Journey</h4><p>Map every step and hand-off as it really happens.</p></div>
+      <div class="step"><h4>Constraints</h4><p>SLAs, audit, failure modes: what can't change.</p></div>
+      <div class="step"><h4>Architecture</h4><p>The simplest design that fits those constraints.</p></div>
+      <div class="step"><h4>Evidence</h4><p>Tests, evals and metrics that prove it works.</p></div>
+    </div>
+  </section>
+  <section id="writing">
+    <div class="sec-head"><div><span class="num">04 / writing</span><h2>Notes from the work</h2></div><p>Longer pieces from the <a href="https://github.com/MountainBridge/MountainBridges">Engineering Casebook</a>.</p></div>
+    <ul class="writing">
+      <li><a href="https://github.com/MountainBridge/MountainBridges/blob/main/articles/ambiguity-to-architecture.md" target="_blank" rel="noopener"><div><h3>From ambiguity to architecture: the code wasn't the hard part</h3><p>The questions to ask before the first design decision.</p></div><span>design</span></a></li>
+      <li><a href="https://github.com/MountainBridge/MountainBridges/blob/main/articles/llm-evaluation-systems.md" target="_blank" rel="noopener"><div><h3>LLM evaluation is a systems problem, not just a prompt problem</h3><p>Why grading the final answer isn't enough.</p></div><span>ai</span></a></li>
+      <li><a href="https://github.com/MountainBridge/MountainBridges/blob/main/articles/01-regression-was-a-context-problem.md" target="_blank" rel="noopener"><div><h3>Regression was a context problem</h3><p>When knowledge is spread across teams, a static suite can't keep up.</p></div><span>quality</span></a></li>
+      <li><a href="https://github.com/MountainBridge/MountainBridges/blob/main/case-studies/02-golden-paths-without-lock-in.md" target="_blank" rel="noopener"><div><h3>A paved road without a prison</h3><p>Platform standards engineers actually want to follow.</p></div><span>platform</span></a></li>
+    </ul>
+  </section>
+  <section id="experience">
+    <div class="sec-head"><div><span class="num">05 / experience</span><h2>11+ years at JPMorganChase</h2></div></div>
+    <dl class="timeline">
+      <dt>Mar 2023 – present</dt><dd><b>Software Engineer III</b><p>Technical lead on an enterprise workflow platform for loan operations. Leads proofs of concept, regression automation and AI evaluation work.</p></dd>
+      <dt>Mar 2018 – Feb 2023</dt><dd><b>Software Engineer</b><p>Client-facing and enterprise platforms across payments, client onboarding and lending.</p></dd>
+      <dt>Jul 2015 – Feb 2018</dt><dd><b>Technology Analyst</b><p>Full stack development on banking applications.</p></dd>
+    </dl>
+  </section>
+  <section id="stories">
+    <div class="stories">
+      <div><span class="num">06 / engineering stories</span><h2>Real systems, explained simply</h2>
+        <p class="lede" style="margin-top:16px;font-size:17px">On Instagram as <strong>@stok.eed</strong>, I take one idea at a time (idempotency, retries, state machines, evaluating AI output) and explain it with an everyday story. The longer version always lands in the casebook.</p>
+        <div class="cta"><a class="btn primary" href="https://www.instagram.com/stok.eed" target="_blank" rel="noopener">Watch on Instagram →</a></div>
+      </div>
+      <div class="phone" aria-hidden="true"><small>@stok.eed</small><b>Why did I get charged twice?</b><small>idempotency, in 60 seconds</small></div>
+    </div>
+  </section>
+</main>
+<footer id="contact"><div class="wrap">
+  <span class="num">07 / contact</span>
+  <h2>Hiring for full stack, developer experience or AI reliability? Let's talk.</h2>
+  <div class="contact">
+    <a class="btn primary" href="https://www.linkedin.com/in/nidhiverma200" target="_blank" rel="noopener">Message me on LinkedIn</a>
+    <a class="btn" href="https://github.com/MountainBridge" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.instagram.com/stok.eed" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <div class="fine"><span>Bengaluru, India · open to hybrid</span><span class="mono">built by hand · flip the switch ☀ / ☾</span></div>
+</div></footer>
+<script>
+  document.getElementById('toggle').addEventListener('click',function(){
+    var r=document.documentElement,t=r.dataset.theme==='dark'?'light':'dark';r.dataset.theme=t;
+    try{localStorage.setItem('theme',t)}catch(e){}
+  });
+</script>
+</body>
+</html>
