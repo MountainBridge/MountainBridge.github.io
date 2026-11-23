@@ -171,12 +171,12 @@ footer h2{max-width:14em}
       </div>
       <div class="term only-dark" aria-label="Trace of the same journey">
         <div class="dots"><i></i><i></i><i></i></div>
-        <div class="cmd"><span>$</span> trace --journey loan-payment</div>
-        <div class="row"><b>person</b><i>✓</i>ops analyst · loan servicing</div>
-        <div class="row"><b>journey</b><i>✓</i>steps mapped · hand-offs named</div>
-        <div class="row"><b>constraints</b><i>✓</i>SLA · audit trail · idempotency</div>
-        <div class="row"><b>architecture</b><i>✓</i>event-driven state machine</div>
-        <div class="row"><b>evidence</b><i>✓</i>regression · field-level eval</div>
+        <div class="cmd"><span>$</span> trace --journey payment-retry</div>
+        <div class="row"><b>person</b><i>✓</i>customer retrying a payment</div>
+        <div class="row"><b>journey</b><i>✓</i>request → timeout → retry</div>
+        <div class="row"><b>constraints</b><i>✓</i>no double charge · audit trail</div>
+        <div class="row"><b>architecture</b><i>✓</i>idempotency key · state machine</div>
+        <div class="row"><b>evidence</b><i>✓</i>regression · contract tests</div>
         <div class="cmd"><span>$</span> <span class="cursor"></span></div>
       </div>
     </div>
@@ -189,7 +189,7 @@ footer h2{max-width:14em}
       <div class="card"><h3>AI evaluation &amp; reliability</h3><p>AI output can look right and still be wrong. I build checks that score it field by field, weighted by business impact.</p>
         <ul><li>LLM evaluation and test design</li><li>Agents, tools and MCP</li><li>Regression that explains <i>why</i> a test failed</li></ul></div>
       <div class="card"><h3>Making systems easy to understand</h3><p>Case studies, reference patterns and short videos that help other engineers adopt good practice faster.</p>
-        <ul><li>Technical writing and docs</li><li>Talks and walkthroughs</li><li>Engineering Stories on Instagram</li></ul></div>
+        <ul><li>Technical writing and docs</li><li>Internal talks and walkthroughs</li><li>Engineering Stories on Instagram</li></ul></div>
     </div>
   </section>
   <section id="work">
@@ -245,9 +245,9 @@ footer h2{max-width:14em}
   <section id="experience">
     <div class="sec-head"><div><span class="num">05 / experience</span><h2>11+ years at JPMorganChase</h2></div></div>
     <dl class="timeline">
-      <dt>Mar 2023 – present</dt><dd><b>Software Engineer III</b><p>Technical lead on an enterprise workflow platform for loan operations. Leads proofs of concept, regression automation and AI evaluation work.</p></dd>
-      <dt>Mar 2018 – Feb 2023</dt><dd><b>Software Engineer</b><p>Client-facing and enterprise platforms across payments, client onboarding and lending.</p></dd>
-      <dt>Jul 2015 – Feb 2018</dt><dd><b>Technology Analyst</b><p>Full stack development on banking applications.</p></dd>
+      <dt>Mar 2023 – present</dt><dd><b>Software Engineer III</b><p>Technical lead for feature delivery on an enterprise workflow platform, presenting proofs of concept to senior technology leaders. Now on loan operations: Node.js modernization and an end-to-end test suite (contract, functional, integration) with Karate, Playwright and PactFlow.</p></dd>
+      <dt>Mar 2018 – Feb 2023</dt><dd><b>Software Engineer II</b><p>Client-facing and enterprise platforms across payments and client onboarding (KYC). Moved to the enterprise workflow platform in 2022.</p></dd>
+      <dt>Jul 2015 – Feb 2018</dt><dd><b>Technology Analyst</b><p>Joined as a campus hire. Full stack development on banking applications, including the client onboarding (KYC) platform from 2017.</p></dd>
     </dl>
   </section>
   <section id="stories">
@@ -256,7 +256,7 @@ footer h2{max-width:14em}
         <p class="lede" style="margin-top:16px;font-size:17px">On Instagram as <strong>@stok.eed</strong>, I take one idea at a time (idempotency, retries, state machines, evaluating AI output) and explain it with an everyday story. The longer version always lands in the casebook.</p>
         <div class="cta"><a class="btn primary" href="https://www.instagram.com/stok.eed" target="_blank" rel="noopener">Watch on Instagram →</a></div>
       </div>
-      <div class="phone" aria-hidden="true"><small>@stok.eed</small><b>Why did I get charged twice?</b><small>idempotency, in 60 seconds</small></div>
+      <div class="phone" aria-hidden="true"><small>@stok.eed · Part 1 of 6</small><b>Build an AI agent from zero</b><small>model → tool → agent → …</small></div>
     </div>
   </section>
 </main>
