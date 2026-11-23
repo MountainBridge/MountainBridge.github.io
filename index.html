@@ -135,6 +135,29 @@ footer{padding:72px 0 56px;border-top:1px solid var(--line)}
 footer h2{max-width:14em}
 .contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .fine{margin-top:48px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+/* story / system slider */
+.compare{position:relative;padding:0;overflow:hidden;min-height:340px;cursor:ew-resize;touch-action:pan-y;user-select:none;-webkit-user-select:none;display:block}
+.compare .pane{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:44px 26px 26px}
+.pane-story{background:#FBF7F0;--ink:#1D1B18;--accent:#C2502A}
+.pane-story text{font-family:var(--sans);font-size:14px;fill:#1D1B18;font-weight:500}
+.pane-story .note{font-family:var(--serif);font-style:italic;fill:#C2502A;font-size:15px;font-weight:400}
+.pane-story svg{width:100%;height:auto;display:block}
+.pane-system{background:#0D1117;background-image:radial-gradient(#30363D 1px,transparent 1px);background-size:22px 22px;clip-path:inset(0 0 0 var(--x));
+  --ink:#E9E4D8;--muted:#8B949E;--line:#30363D;--accent:#F0A24E;--accent-2:#7EE787}
+.pane-system .term{background:#161B22;border:1px solid #30363D;border-radius:12px;padding:16px 18px;color:#E9E4D8}
+.pane-tag{position:absolute;top:16px;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+.pane-story .pane-tag{left:20px;color:#C2502A}
+.pane-system .pane-tag{right:20px;color:#F0A24E}
+.compare .seam{position:absolute;top:0;bottom:0;left:var(--x);width:2px;margin-left:-1px;background:linear-gradient(#C2502A,#F0A24E);pointer-events:none}
+.compare .knob{position:absolute;top:50%;left:var(--x);transform:translate(-50%,-50%);width:76px;height:38px;border-radius:19px;border:2px solid #1D1B18;
+  background:linear-gradient(90deg,#F4EEE3 50%,#161B22 50%);box-shadow:0 0 0 3px #E9E4D8,0 8px 22px rgba(0,0,0,.28);cursor:ew-resize;display:flex;align-items:center;justify-content:space-between;padding:0 7px;font-size:16px;line-height:1}
+.compare .knob .sun{color:#C2502A}.compare .knob .moon{width:24px;height:24px;border-radius:50%;background:#F0A24E;color:#0D1117;display:grid;place-items:center;font-size:14px}
+.compare .knob:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.compare.dragging .knob{transform:translate(-50%,-50%) scale(1.06)}
+.compare-hint{margin-top:10px;font-size:12.5px;color:var(--muted);text-align:center;font-family:var(--mono)}
+@media (max-width:860px){.compare{min-height:390px}.compare .pane{padding:42px 14px 18px}
+  .pane-system .term{font-size:12px;line-height:1.5;white-space:normal}.pane-system .row{display:block;margin-top:6px}
+  .pane-system .row b{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#F0A24E}.pane-system .row i{display:none}}
 </style>
 </head>
 <body>
@@ -154,33 +177,40 @@ footer h2{max-width:14em}
         <a class="btn" href="https://www.linkedin.com/in/nidhiverma200" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/MountainBridge" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <p class="hint">Try the switch in the corner: <b class="only-light">light shows the story</b><b class="only-dark">dark shows the system</b> behind every project.</p>
+      <p class="hint"><b>Drag the switch</b> in the picture to swap the story for the system behind it. The switch in the corner flips the whole site.</p>
     </div>
-    <div class="visual">
-      <div class="path only-light" aria-label="person, journey, constraints, architecture, evidence">
+    <div class="visual compare" id="compare" style="--x:50%">
+      <div class="pane pane-story" aria-label="The story: person, journey, constraints, architecture, evidence">
+        <span class="pane-tag">☀ the story</span>
         <svg viewBox="8 82 514 220" role="img" aria-hidden="true">
-          <path d="M30,170 C90,170 90,110 150,110 C210,110 210,190 270,190 C330,190 330,100 390,100 C450,100 450,150 490,150" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 6"/>
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#C2502A" stroke-width="1.6"/></marker></defs>
+          <path d="M30,170 C90,170 90,110 150,110 C210,110 210,190 270,190 C330,190 330,100 390,100 C450,100 450,150 490,150" fill="none" stroke="#1D1B18" stroke-width="1.5" stroke-dasharray="5 6"/>
           <circle cx="30" cy="170" r="13" fill="#C2502A" stroke="#1D1B18" stroke-width="1.6"/><text x="30" y="208" text-anchor="middle">person</text>
           <circle cx="150" cy="110" r="9" fill="#FBF7F0" stroke="#1D1B18" stroke-width="1.6"/><text x="150" y="146" text-anchor="middle">journey</text>
           <circle cx="270" cy="190" r="9" fill="#FBF7F0" stroke="#1D1B18" stroke-width="1.6"/><text x="270" y="226" text-anchor="middle">constraints</text>
           <circle cx="390" cy="100" r="9" fill="#FBF7F0" stroke="#1D1B18" stroke-width="1.6"/><text x="390" y="136" text-anchor="middle">architecture</text>
           <circle cx="490" cy="150" r="13" fill="#C2502A" stroke="#1D1B18" stroke-width="1.6"/><text x="482" y="188" text-anchor="middle">evidence</text>
-          <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#C2502A" stroke-width="1.6"/></marker></defs>
           <path d="M240,276 C222,262 236,240 256,234" fill="none" stroke="#C2502A" stroke-width="1.4" marker-end="url(#ah)"/>
           <text class="note" x="250" y="292" text-anchor="middle">where the real problem usually hides</text>
         </svg>
       </div>
-      <div class="term only-dark" aria-label="Trace of the same journey">
-        <div class="dots"><i></i><i></i><i></i></div>
-        <div class="cmd"><span>$</span> trace --journey payment-retry</div>
-        <div class="row"><b>person</b><i>✓</i>customer retrying a payment</div>
-        <div class="row"><b>journey</b><i>✓</i>request → timeout → retry</div>
-        <div class="row"><b>constraints</b><i>✓</i>no double charge · audit trail</div>
-        <div class="row"><b>architecture</b><i>✓</i>idempotency key · state machine</div>
-        <div class="row"><b>evidence</b><i>✓</i>regression · contract tests</div>
-        <div class="cmd"><span>$</span> <span class="cursor"></span></div>
+      <div class="pane pane-system" aria-label="The system: a trace of the same journey">
+        <span class="pane-tag">the system ☾</span>
+        <div class="term">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <div class="cmd"><span>$</span> trace --journey payment-retry</div>
+          <div class="row"><b>person</b><i>✓</i>customer retrying a payment</div>
+          <div class="row"><b>journey</b><i>✓</i>request → timeout → retry</div>
+          <div class="row"><b>constraints</b><i>✓</i>no double charge · audit trail</div>
+          <div class="row"><b>architecture</b><i>✓</i>idempotency key · state machine</div>
+          <div class="row"><b>evidence</b><i>✓</i>regression · contract tests</div>
+          <div class="cmd"><span>$</span> <span class="cursor"></span></div>
+        </div>
       </div>
+      <div class="seam" aria-hidden="true"></div>
+      <button class="knob" id="knob" role="slider" aria-label="Slide between the story and the system" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="sun">☀</span><span class="moon">☾</span></button>
     </div>
+
   </header>
   <section id="what">
     <div class="sec-head"><div><span class="num">01 / what I bring</span><h2>Where I do my best work</h2></div></div>
@@ -282,5 +312,37 @@ footer h2{max-width:14em}
     try{localStorage.setItem('theme',t)}catch(e){}
   });
 </script>
+<script>
+(function(){
+  var box=document.getElementById('compare'), knob=document.getElementById('knob'); if(!box) return;
+  var x=50, dragging=false;
+  function set(v){x=Math.max(0,Math.min(100,v));box.style.setProperty('--x',x+'%');knob.setAttribute('aria-valuenow',Math.round(x));
+    knob.setAttribute('aria-valuetext',x<15?'the story':x>85?'the system':'half story, half system');}
+  function fromEvent(e){var r=box.getBoundingClientRect();set((e.clientX-r.left)/r.width*100);}
+  box.addEventListener('pointerdown',function(e){dragging=true;box.classList.add('dragging');box.setPointerCapture(e.pointerId);fromEvent(e);});
+  box.addEventListener('pointermove',function(e){if(dragging)fromEvent(e);});
+  ['pointerup','pointercancel'].forEach(function(t){box.addEventListener(t,function(){dragging=false;box.classList.remove('dragging');});});
+  knob.addEventListener('keydown',function(e){
+    var step=e.shiftKey?25:5;
+    if(e.key==='ArrowLeft'){set(x-step);e.preventDefault();}
+    else if(e.key==='ArrowRight'){set(x+step);e.preventDefault();}
+    else if(e.key==='Home'){set(0);e.preventDefault();}
+    else if(e.key==='End'){set(100);e.preventDefault();}
+  });
+  // one gentle hint so visitors know it moves
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      if(!entries[0].isIntersecting) return; io.disconnect();
+      var frames=[50,38,62,50], i=0;
+      (function next(){ if(dragging||i>=frames.length) return; box.style.transition='none';
+        var from=x,to=frames[i++],t0=performance.now();
+        (function tick(t){var p=Math.min(1,(t-t0)/450);p=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;if(!dragging)set(from+(to-from)*p);if(p<1)requestAnimationFrame(tick);else setTimeout(next,120);})(t0);
+      })();
+    },{threshold:.6});
+    io.observe(box);
+  }
+})();
+</script>
+
 </body>
 </html>
